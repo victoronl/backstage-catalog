@@ -14,7 +14,7 @@ metadata:
 spec:
   owner: team-backstage
   description: An Backstage application.
-tags: [backstage, postgresql]
+# tags: [backstage, postgresql]
 
 ---
 # Define a service within the system
