@@ -3,9 +3,17 @@ apiVersion: backstage.io/v1alpha1
 kind: System
 metadata:
   name: backstage-system
+  annotations:
+    backstage.io/kubernetes-id: backstage
+    backstage.io/kubernetes-namespace: backstage
+    argocd/app-name: backstage
 spec:
   owner: team-backstage
   description: An Backstage application.
+  links:
+    - url: https://backstage-ks-wsl.victor.onl
+      title: Backstage
+      icon: dashboard
 
 ---
 # Define a service within the system
@@ -21,9 +29,9 @@ spec:
   type: service
   owner: team-backstage
   system: backstage-system
-  lifecycle: production
+  lifecycle: experimental
   dependsOn:
-    - resource:default/backstage-db
+    - resource:backstage-system/backstage-db
   links:
     - url: https://dev.azure.com/victoronl/backstage/_build?definitionId=3
       title: Azure Pipeline
@@ -38,4 +46,4 @@ spec:
   type: database
   owner: team-database
   system: backstage-system
-  lifecycle: production
+  lifecycle: experimental
