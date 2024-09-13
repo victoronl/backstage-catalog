@@ -8,9 +8,9 @@ metadata:
       title: Backstage
       icon: dashboard
   annotations:
-    backstage.io/kubernetes-id: backstage
-    backstage.io/kubernetes-namespace: backstage
-    argocd/app-name: backstage
+    'backstage.io/kubernetes-id': backstage
+    'backstage.io/kubernetes-namespace': backstage
+    'argocd/app-name': backstage
 spec:
   owner: team-backstage
   domain: backstage
@@ -27,9 +27,9 @@ metadata:
       title: Azure Pipeline
       icon: azure
   annotations:
-    backstage.io/kubernetes-id: backstage
-    backstage.io/kubernetes-namespace: backstage
-    argocd/app-name: backstage
+    'backstage.io/kubernetes-id': backstage
+    'backstage.io/kubernetes-namespace': backstage
+    'argocd/app-name': backstage
 spec:
   type: service
   owner: team-backstage
