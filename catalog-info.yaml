@@ -3,14 +3,14 @@ apiVersion: backstage.io/v1alpha1
 kind: System
 metadata:
   name: backstage-system
-  annotations:
-    backstage.io/kubernetes-id: backstage
-    backstage.io/kubernetes-namespace: backstage
-    argocd/app-name: backstage
   links:
     - url: https://backstage-ks-wsl.victor.onl
       title: Backstage
       icon: dashboard
+  annotations:
+    backstage.io/kubernetes-id: backstage
+    backstage.io/kubernetes-namespace: backstage
+    argocd/app-name: backstage
 spec:
   owner: team-backstage
   description: An Backstage application.
@@ -21,14 +21,14 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: backstage-service
-  annotations:
-    backstage.io/kubernetes-id: backstage
-    backstage.io/kubernetes-namespace: backstage
-    argocd/app-name: backstage
   links:
     - url: https://dev.azure.com/victoronl/backstage/_build?definitionId=3
       title: Azure Pipeline
       icon: azure
+  annotations:
+    backstage.io/kubernetes-id: backstage
+    backstage.io/kubernetes-namespace: backstage
+    argocd/app-name: backstage
 spec:
   type: service
   owner: team-backstage
