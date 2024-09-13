@@ -15,6 +15,7 @@ spec:
   owner: team-backstage
   domain: backstage
   description: An Backstage application.
+tags: [backstage, postgresql]
 
 ---
 # Define a service within the system
@@ -34,7 +35,6 @@ spec:
   type: service
   owner: team-backstage
   system: backstage-system
-  domain: backstage
   lifecycle: experimental
   dependsOn:
     - resource:default/backstage-db
@@ -48,5 +48,4 @@ spec:
   type: database
   owner: team-database
   system: backstage-system
-  domain: backstage
   lifecycle: experimental
