@@ -7,10 +7,6 @@ metadata:
     - url: https://backstage-ks-wsl.victor.onl
       title: Backstage
       icon: dashboard
-  annotations:
-    'backstage.io/kubernetes-id': backstage
-    'backstage.io/kubernetes-namespace': backstage
-    'argocd/app-name': backstage
 spec:
   owner: team-backstage
   description: An Backstage application.
@@ -26,9 +22,10 @@ metadata:
       title: Azure Pipeline
       icon: azure
   annotations:
-    'backstage.io/kubernetes-id': backstage
-    'backstage.io/kubernetes-namespace': backstage
-    'argocd/app-name': backstage
+    backstage.io/kubernetes-id: backstage
+    backstage.io/kubernetes-namespace: backstage
+    argocd/app-name: backstage
+    dev.azure.com/project-repo: backstage/backstage
 spec:
   type: service
   owner: team-backstage
