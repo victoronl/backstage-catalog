@@ -27,3 +27,13 @@ spec:
       title: Azure Pipeline
       icon: azure
 
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: backstage-db
+spec:
+  type: database
+  owner: team-database
+  system: backstage-system
+  lifecycle: production
