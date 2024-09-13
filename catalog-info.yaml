@@ -13,7 +13,6 @@ metadata:
     'argocd/app-name': backstage
 spec:
   owner: team-backstage
-  domain: backstage
   description: An Backstage application.
 tags: [backstage, postgresql]
 
