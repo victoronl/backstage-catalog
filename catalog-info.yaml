@@ -22,6 +22,8 @@ spec:
   owner: team-backstage
   system: backstage-system
   lifecycle: production
+  dependsOn:
+    - resource:default/backstage-db
   links:
     - url: https://dev.azure.com/victoronl/backstage/_build?definitionId=3
       title: Azure Pipeline
