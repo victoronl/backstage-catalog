@@ -31,7 +31,7 @@ spec:
   system: backstage-system
   lifecycle: experimental
   dependsOn:
-    - resource:backstage-system/backstage-db
+    - resource:default/backstage-db
   links:
     - url: https://dev.azure.com/victoronl/backstage/_build?definitionId=3
       title: Azure Pipeline
