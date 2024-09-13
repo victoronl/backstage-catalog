@@ -1,17 +1,29 @@
+# Define the system
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: backstage-system
+spec:
+  owner: team-backstage
+  description: An Backstage application.
+
+---
+# Define a service within the system
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: backstage
-  description: An example of a Backstage application.
-  # Example for optional annotations
-  # annotations:
-  #   github.com/project-slug: backstage/backstage
-  #   backstage.io/techdocs-ref: dir:.
+  name: backstage-service
   annotations:
     backstage.io/kubernetes-id: backstage
     backstage.io/kubernetes-namespace: backstage
     argocd/app-name: backstage
 spec:
   type: service
-  owner: victor@victor.onl
+  owner: team-backstage
+  system: backstage-system
   lifecycle: production
+  links:
+    - url: https://dev.azure.com/victoronl/backstage/_build?definitionId=3
+      title: Azure Pipeline
+      icon: azure
+
